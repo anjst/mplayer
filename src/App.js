@@ -81,6 +81,8 @@ function App() {
         isPlaying={isPlaying}
         setSongs={setSongs}
         libraryStatus={libraryStatus}
+        setIsPlaying={setIsPlaying}
+        currentSong={currentSong}
       />
       <audio
         onLoadedMetadata={timehandler}

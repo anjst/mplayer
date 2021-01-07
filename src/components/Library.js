@@ -8,11 +8,13 @@ const Library = ({
   isPlaying,
   setSongs,
   libraryStatus,
+  setIsPlaying,
+  currentSong,
 }) => {
   return (
     <div className={`library ${libraryStatus ? "active-library" : ""}`}>
-      <div>
-        <h2>Library</h2>
+      <div className="library-nav">
+        <h2 className="library-name">Library</h2>
       </div>
       <div className="library-songs">
         {songs.map((song) => (
@@ -25,6 +27,8 @@ const Library = ({
             audioRef={audioRef}
             isPlaying={isPlaying}
             setSongs={setSongs}
+            setIsPlaying={setIsPlaying}
+            currentSong={currentSong}
           />
         ))}
       </div>
