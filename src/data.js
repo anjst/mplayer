@@ -29,7 +29,7 @@ function chillHop() {
       artist: "Sitting Duck, Hoffy Beats, Otaam",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=7995",
       active: false,
-      color: ["#60946D", "#FCEDA2"],
+      color: ["#60946D", "#FFFFFF"],
       id: uuidv4(),
     },
     {
@@ -59,7 +59,7 @@ function chillHop() {
       artist: "Toonorth",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=8425",
       active: false,
-      color: ["#204E4B", "#70C1CC"],
+      color: ["#79C5E5", "#70C1CC"],
       id: uuidv4(),
     },
     {
@@ -86,10 +86,70 @@ function chillHop() {
       name: "Lagoons",
       cover:
         "https://chillhop.com/wp-content/uploads/2020/06/49f6e32ca521fbad46a1b281e3893cf6254bf11d-1024x1024.jpg",
+      artist: "VYNK",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=9741",
+      active: false,
+      color: ["#FDF0DE", "#412939"],
+      id: uuidv4(),
+    },
+    {
+      name: "Green",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/05/74aa978ba66ea997cbf6fb5f451878e121bf0728-1024x1024.jpg",
       artist: "Strehlow, Chris Mazuera",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=8266",
       active: false,
+      color: ["#C62D2A", "#FCE299"],
+      id: uuidv4(),
+    },
+    {
+      name: "Rest Until Dark",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/09/c209a7df7b9bc133dfff73ce86ebc3c57c2b73dd-1024x1024.jpg",
+      artist: "Sleepy Fish",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=10015",
+      active: false,
       color: ["#FDF0DE", "#412939"],
+      id: uuidv4(),
+    },
+    {
+      name: "When To Say Goodbye",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/07/24d75baebd16d287703d481b4cc77f6c0b5159c7-1024x1024.jpg",
+      artist: "Ward Wills",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=8115",
+      active: false,
+      color: ["#48789E", "#073468"],
+      id: uuidv4(),
+    },
+    {
+      name: "Toft",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/07/858b533ba20ff95bf5b401089b195d1a8cb43870-1024x1024.jpg",
+      artist: "Felty, Ezzy",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=9312",
+      active: false,
+      color: ["#182142", "#2F85C0"],
+      id: uuidv4(),
+    },
+    {
+      name: "Ocean Alley",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/06/49f6e32ca521fbad46a1b281e3893cf6254bf11d-1024x1024.jpg",
+      artist: "Strehlow, Aylior",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=9360",
+      active: false,
+      color: ["#FCEFD0", "#793642"],
+      id: uuidv4(),
+    },
+    {
+      name: "Cancao",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/05/260a909fca701bbb7593f5f8f9cff9508cca2856-1024x1024.jpg",
+      artist: "The BREED",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=7961",
+      active: false,
+      color: ["#D64D57", "#F9DFCF"],
       id: uuidv4(),
     },
   ];

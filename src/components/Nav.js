@@ -9,7 +9,7 @@ const Nav = ({ libraryStatus, setLibraryStatus }) => {
         Library
         <FontAwesomeIcon icon={faMusic} />
       </button>
-      <h1>A.S.</h1>
+      <h1>nenefm</h1>
     </nav>
   );
 };
