@@ -1,9 +1,22 @@
 import React from "react";
 
-const Song = ({ currentSong }) => {
+const Song = ({ currentSong, isPlaying }) => {
+  const spinRun = {
+    animation: "rotation 35s infinite linear",
+    animationPlayState: "running",
+  };
+  const spinStop = {
+    animation: "rotation 35s infinite linear",
+    animationPlayState: "paused",
+  };
+
   return (
     <div className="song-container">
-      <img alt={currentSong.name} src={currentSong.cover} />
+      <img
+        style={isPlaying ? spinRun : spinStop}
+        alt={currentSong.name}
+        src={currentSong.cover}
+      />
       <h2>{currentSong.name}</h2>
       <h3>{currentSong.artist}</h3>
     </div>

@@ -40,17 +40,17 @@ const Player = ({
     setSongInfo({ ...songInfo, currentTime: e.target.value });
   };
 
-  const controlLibraryFocus = () => {
+  const controlLibraryFocus = (currentSongHere) => {
     const newSongs = songs.map((song) => {
-      if (song.id === currentSong.id) {
+      if (song.id === currentSongHere.id) {
         return {
           ...song,
-          active: false,
+          active: true,
         };
       } else {
         return {
           ...song,
-          active: true,
+          active: false,
         };
       }
     });
@@ -61,22 +61,26 @@ const Player = ({
     let currentIndex = songs.findIndex((songs) => songs.id === currentSong.id);
     if (direction === "skip-forward") {
       await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
-      controlLibraryFocus();
+      controlLibraryFocus(songs[(currentIndex + 1) % songs.length]);
     }
     if (direction === "skip-back") {
       if (currentIndex === 0) {
         await setCurrentSong(songs[songs.length - 1]);
-        controlLibraryFocus();
+        controlLibraryFocus(songs[songs.length - 1]);
         if (isPlaying) audioRef.current.play();
-        controlLibraryFocus();
         return;
       }
+      if (isPlaying) {
+        await setCurrentSong(songs[(currentIndex - 1) % songs.length]);
+        audioRef.current.play();
+        controlLibraryFocus(songs[(currentIndex - 1) % songs.length]);
+      }
       await setCurrentSong(songs[(currentIndex - 1) % songs.length]);
-      controlLibraryFocus();
+      controlLibraryFocus(songs[(currentIndex - 1) % songs.length]);
     }
-    if (isPlaying) {
+    if (isPlaying && direction === "skip-forward") {
       audioRef.current.play();
-      controlLibraryFocus();
+      controlLibraryFocus(songs[(currentIndex + 1) % songs.length]);
     }
   };
 

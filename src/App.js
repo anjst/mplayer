@@ -24,7 +24,6 @@ function App() {
     const duration = e.target.duration;
     //calculate percentage
     const animation = Math.round((current / duration) * 100);
-    console.log(animation);
     setSongInfo({
       ...songInfo,
       currentTime: current,
@@ -33,17 +32,17 @@ function App() {
     });
   };
 
-  const controlLibraryFocus = () => {
+  const controlLibraryFocus = (current) => {
     const newSongs = songs.map((song) => {
-      if (song.id === currentSong.id) {
+      if (song.id === current.id) {
         return {
           ...song,
-          active: false,
+          active: true,
         };
       } else {
         return {
           ...song,
-          active: true,
+          active: false,
         };
       }
     });
@@ -55,14 +54,14 @@ function App() {
     await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
     if (isPlaying) {
       audioRef.current.play();
-      controlLibraryFocus();
+      controlLibraryFocus(songs[(currentIndex + 1) % songs.length]);
     }
   };
 
   return (
     <div className={`App ${libraryStatus ? "library-active" : ""}`}>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
-      <Song currentSong={currentSong} />
+      <Song currentSong={currentSong} isPlaying={isPlaying} />
       <Player
         currentSong={currentSong}
         isPlaying={isPlaying}
